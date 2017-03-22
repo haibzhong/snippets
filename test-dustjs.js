@@ -1,7 +1,11 @@
 dust = dust || {};
 dust.isDebug = true;
 
-require(['https://cdn.rawgit.com/linkedin/dustjs/v2.2.3/lib/compiler.js', 'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js'], function() {
+require([
+    'https://cdn.rawgit.com/linkedin/dustjs/v2.2.3/lib/compiler.js', 
+    'https://cdn.rawgit.com/linkedin/dustjs/v2.2.3/lib/parser.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js'
+], function() {
     require(['ace/ace'], function(ace) {
         var test = test || {};
         test.dust = function(tpl, data, callback) {
